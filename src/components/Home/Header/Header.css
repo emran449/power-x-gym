@@ -1,0 +1,8 @@
+.header-container {
+    height: 100%;
+    position: relative;
+    background-image: url(../../../Image-Icon/bgm-header.jpg);
+    background-size: cover;
+    margin-bottom: 5rem;
+}
+

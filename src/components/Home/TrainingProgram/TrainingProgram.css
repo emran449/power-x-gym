@@ -1,0 +1,14 @@
+.yoga {
+    width: auto;
+    height: 400px;
+    background-image: url(../../../Image-Icon/yoga-bg.png);
+    position: relative;
+    background-size: cover;
+}
+.cardio {
+    width: auto;
+    height: 400px;
+    background-image: url(../../../Image-Icon/cardio-bg.jpg);
+    position: relative;
+    background-size: cover;
+}
