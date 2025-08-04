@@ -8,11 +8,12 @@ import Img5 from '../../../Image-Icon/strength.jpg';
 import Img6 from '../../../Image-Icon/phycho2.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router';
 
 const classesData = [
     {name: 'Psycho Training', img: Img1},
     {name: 'Self Defense', img: Img2},
-    {name: 'Advanced Gym', img: Img3},
+    {name: 'Advanced Gym', img: Img3, link: '/advanced-gym'},
     {name: 'Cardio Training', img: Img4},
     {name: 'Strength Training', img: Img5},
     {name: 'Psycho Training', img: Img6}
@@ -29,9 +30,11 @@ const Classes = () => {
                         <div className='mt-3'>
                             <div className="position-relative class-card">
                             <img height={300} width='300px' src={item.img} alt={item.name} className='d-flex justify-content-center' />
+                            <Link to={item.link || '#'} className='text-decoration-none text-white'>
                                 <h2 className='text-bg-warning p-3 me-2 position-absolute bottom-0'>
                                     {item.name} <FontAwesomeIcon icon={faArrowRight} />
                                 </h2>
+                            </Link>    
                             </div>
                         </div>
                     </div>

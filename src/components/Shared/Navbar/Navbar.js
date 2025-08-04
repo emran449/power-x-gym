@@ -1,6 +1,21 @@
 import React from 'react';
+import { useLocation } from 'react-router';
 
 const Navbar = () => {
+  const location = useLocation();
+  const isOurClassesPage = location.pathname === '/classes';
+  const isAdvancedGymPage = location.pathname === '/advanced-gym';
+
+
+  // If you want to apply different styles or logic based on the page, you can do it here
+  // For example, you can conditionally render different classes or styles
+  let navbarItemClass = 'nav-link mx-2';
+  if (isOurClassesPage || isAdvancedGymPage) {
+    navbarItemClass += ' text-warning'; // Add active class if on Our Classes page
+  }
+  else {
+    navbarItemClass += ' text-white'; // Default class for other pages
+  }
     return (
         <nav  className="navbar navbar-expand-lg text-white ">
   <div className="container-fluid text-white">
@@ -17,7 +32,7 @@ const Navbar = () => {
           <a className="nav-link text-white mx-2" href="#">Services</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-white mx-2 mx-2" href="/classes">Our Classes</a>
+          <a className={navbarItemClass} href="/classes">Our Classes</a>
         </li>
         <li className="nav-item">
           <a className="nav-link text-white mx-2" href="#">About Us</a>
