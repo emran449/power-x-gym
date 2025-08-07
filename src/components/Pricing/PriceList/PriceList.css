@@ -1,0 +1,28 @@
+.advanced {
+    background-image: url('../../../Image-Icon/card-1.jpg');
+    background-size: cover;
+    background-position: center;
+  border: 2px solid #ffc107;
+  border-radius: 10px;
+}
+.beginners {
+    background-image: url('../../../Image-Icon/card-2.jpg');
+    background-size: cover;
+    background-position: center;
+  border: 2px solid #ffc107;
+  border-radius: 10px;
+}
+.basic {
+    background-image: url('../../../Image-Icon/card-3.jpg');
+    background-size: cover;
+    background-position: center;
+  border: 2px solid #ffc107;
+  border-radius: 10px;
+}
+.price-content {
+    -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: brightness(0.4);
+
+        height: 100%;
+        width: 100%;
+}

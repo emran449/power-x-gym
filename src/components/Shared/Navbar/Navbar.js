@@ -5,16 +5,18 @@ const Navbar = () => {
   const location = useLocation();
   const isOurClassesPage = location.pathname === '/classes';
   const isAdvancedGymPage = location.pathname === '/advanced-gym';
+  const isPricingPage = location.pathname === '/pricing';
 
 
   // If you want to apply different styles or logic based on the page, you can do it here
   // For example, you can conditionally render different classes or styles
-  let navbarItemClass = 'nav-link mx-2';
+  let navbarItemClass = "nav-link text-white mx-2";
+  let navbarItemClassPricing = "nav-link text-white mx-2";
   if (isOurClassesPage || isAdvancedGymPage) {
-    navbarItemClass += ' text-warning'; // Add active class if on Our Classes page
+    navbarItemClass = "nav-link text-warning mx-2"; // Add active class if on Our Classes page
   }
-  else {
-    navbarItemClass += ' text-white'; // Default class for other pages
+   if (isPricingPage) {
+    navbarItemClassPricing = "nav-link text-warning mx-2"; // Add active class if on Pricing page
   }
     return (
         <nav  className="navbar navbar-expand-lg text-white ">
@@ -41,7 +43,7 @@ const Navbar = () => {
           <a className="nav-link text-white mx-2" href="#">Blog</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-white mx-2" href="#">Pricing</a>
+          <a className={navbarItemClassPricing} href="/pricing">Pricing</a>
         </li>
         <li className="nav-item">
           <a className="nav-link text-white mx-2 me-5" href="#">Contact Us</a>
