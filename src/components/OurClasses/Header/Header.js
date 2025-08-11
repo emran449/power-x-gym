@@ -6,6 +6,7 @@ const Header = () => {
     const location = useLocation();
     const isAdvancedGymPage = location.pathname === '/advanced-gym';
     const isPricingPage = location.pathname === '/pricing';
+    const isMembershipPage = location.pathname === '/membership-1';
 
     // If you want to apply different styles or logic based on the page, you can do it here
     // For example, you can conditionally render different classes or styles
@@ -15,6 +16,9 @@ const Header = () => {
     }
     if (isPricingPage) {
         headerTitle = 'Pricing Plans';
+    }
+    if (isMembershipPage) {
+        headerTitle = 'Your Gym Membership';
     }
     return (
         <div className='header-container'>

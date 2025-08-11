@@ -1,7 +1,8 @@
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import './PriceList.css'; // Assuming you have a CSS file for styles
+import './PriceList.css';
+import { useNavigate } from "react-router";
 
 const PriceList = () => {
   const plansData = [
@@ -48,6 +49,7 @@ const PriceList = () => {
       action: "Purchase",
     },
   ];
+  const navigate = useNavigate();
   return (
     <div className="container my-5">
       <div className="text-center ">
@@ -74,7 +76,7 @@ const PriceList = () => {
                   <li className="my-1" key={idx}><FontAwesomeIcon icon={faCheck} /> {feature}</li>
                 ))}
               </ul>
-              <button className="btn btn-warning">{plan.action}</button>
+              <button onClick={()=>navigate('/membership-1')} className="btn btn-warning">{plan.action}</button>
             </div>
             </div>
           </div>
